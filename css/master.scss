@@ -1,0 +1,12 @@
+@import './themes';
+
+@import './directives/navBar';
+
+@import './partials/userHome';
+@import './partials/login';
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

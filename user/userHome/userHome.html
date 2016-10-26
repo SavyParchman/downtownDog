@@ -1,0 +1,188 @@
+<div class="user-page">
+    <user-nav-bar></user-nav-bar>
+    <dog-profile-dir></dog-profile-dir>
+
+    <div class="user-appointments center">
+        <div class="appointment pending col-md-6">
+            <div class="panel-body">
+                <div class="appointment-title">
+                    Pending
+                    <hr>
+                </div>
+                <div class="app-container">
+                    <div ng-repeat="req in myRequest | filter: {status:'Pending'}" class="app-repeat">
+                      <div class="row">
+                          <div class="col-md-5 app-left">
+                              <b>Appointment Type:</b>
+                          </div>
+                          <div class="col-md-7 app-right">
+                              {{req.serviceType}}
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-md-5 app-left">
+                              <b>For:</b>
+                          </div>
+                          <div class="col-md-7 app-right">
+                              {{req.serviceFor}}
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-md-5 app-left">
+                              <b>Notes:</b>
+                          </div>
+                          <div class="col-md-7 app-right">
+                              {{req.notes}}
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-md-5 app-left">
+                              <b>Date:</b>
+                          </div>
+                          <div class="col-md-7 app-right">
+                              {{req.date | date: medium}}
+                          </div>
+                      </div>
+                      <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="appointment approved col-md-6">
+            <div class="panel-body">
+                <div class="appointment-title">
+                    Upcoming Appointments
+                    <hr>
+                </div>
+                <div class="app-container center">
+                    <div class="app-repeat" ng-repeat="req in myRequest | filter: {status:'Approved'}">
+                        <div class="row">
+                            <div class="col-md-5 app-left">
+                                <b>Appointment Type:</b>
+                            </div>
+                            <div class="col-md-7 app-right">
+                                {{req.serviceType}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 app-left">
+                                <b>For:</b>
+                            </div>
+                            <div class="col-md-7 app-right">
+                                {{req.serviceFor}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 app-left">
+                                <b>Notes:</b>
+                            </div>
+                            <div class="col-md-7 app-right">
+                                {{req.notes}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 app-left">
+                                <b>Date:</b>
+                            </div>
+                            <div class="col-md-7 app-right">
+                                {{req.date}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 app-left">
+                                <b>Status:</b>
+                            </div>
+                            <div class="col-md-7 app-right">
+                                {{req.status}}
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-success center"  ui-sref="userRequest">Create New Appointment Request</button>
+    <hr>
+ <!--
+    <div class="userProfileForm">
+      <div layout="column" ng-cloak class="md-inline-form">
+        <h4>Please fill out your User Profile</h4>
+        <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+          <div>
+
+            <md-input-container>
+              <label>First Name</label>
+              <input ng-model="firstName" required>
+            </md-input-container>
+
+            <md-input-container>
+              <label>Last Name</label>
+              <input ng-model="lastName" required>
+            </md-input-container>
+
+          </div>
+        </md-content>
+
+
+        <md-content layout-padding>
+          <div>
+            <form name="userForm">
+
+              <md-input-container class="md-block">
+                <label>Phone Number</label>
+                <input ng-model="phoneNumber" required>
+              </md-input-container>
+
+              <md-input-container class="md-block">
+                <label>Address</label>
+                <input ng-model="streetName" required>
+              </md-input-container>
+
+              <md-input-container md-no-float class="md-block">
+                <input ng-model="streetName2" placeholder="Address 2" required>
+              </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                  <label>City</label>
+                  <input ng-model="city" required>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                  <label>State</label>
+                  <md-select ng-model="state" required>
+                    <md-option ng-repeat="x in states" value="{{x.abbrev}}">
+                      {{x.abbrev}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                  <label>Postal Code</label>
+                  <input name="postalCode" ng-model="zip" placeholder="12345"
+                         required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+                  <div ng-messages="userForm.postalCode.$error" role="alert" multiple>
+                    <div ng-message="required" class="my-message">You must supply a postal code.</div>
+                    <div ng-message="pattern" class="my-message">That doesn't look like a valid postal
+                      code.
+                    </div>
+                    <div ng-message="md-maxlength" class="my-message">
+                      Don't use the long version..
+                    </div>
+                  </div>
+                </md-input-container>
+
+
+              </form>
+            </div>
+
+          </div>
+        </md-content>
+      <button ng-click="submitUserProfile()">Submit</button>
+    </div> --> 
+</div>

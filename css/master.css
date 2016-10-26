@@ -1,0 +1,63 @@
+.navbar .container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px; }
+  .navbar .container li {
+    list-style: none;
+    font-size: 1.2em; }
+    .navbar .container li a {
+      color: #777777; }
+      .navbar .container li a:hover {
+        text-decoration: none;
+        font-weight: bold; }
+
+.img-circle {
+  max-height: 150px; }
+
+.userRequest {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  width: 70%; }
+
+.flexProfile {
+  width: 70%; }
+
+.user-appointments {
+  width: 70%; }
+  .user-appointments .appointment {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px; }
+    .user-appointments .appointment .panel-body {
+      padding-left: 10px;
+      padding-right: 10px; }
+      .user-appointments .appointment .panel-body .appointment-title {
+        font-weight: bold;
+        display: block;
+        font-size: 1.5em;
+        text-align: center; }
+      .user-appointments .appointment .panel-body .app-container .app-repeat {
+        margin-top: 10px;
+        padding: 5px;
+        font-size: 0.7em;
+        width: 350px; }
+        .user-appointments .appointment .panel-body .app-container .app-repeat .app-left {
+          text-align: right; }
+
+.form-signin {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 300px; }
+  .form-signin .checkbox {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*# sourceMappingURL=master.css.map */

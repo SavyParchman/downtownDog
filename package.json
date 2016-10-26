@@ -1,0 +1,12 @@
+{
+  "name": "noserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style-loader": "sass --watch ./css/master.scss:./css/master.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

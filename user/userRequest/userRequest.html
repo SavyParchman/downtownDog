@@ -1,0 +1,50 @@
+<div class="user-page">
+    <user-nav-bar></user-nav-bar>
+
+    <div class="userRequest center">
+
+
+
+        <div layout="column" ng-cloak class="md-inline-form">
+          <md-content layout-padding>
+            <div> <h4>Request Appointment</h4>
+              <form name="userForm">
+                <div layout-gt-md="row">
+                  <md-input-container class="md-block">
+                    <label>Service Needed:</label>
+                    <md-select ng-model="typeService">
+                      <md-option ng-repeat="service in serviceType" value="{{service}}">
+                        {{service}}
+                      </md-option>
+                    </md-select>
+                  </md-input-container>
+
+
+                  <md-input-container class="md-block">
+                    <label>Service For:</label>
+                      <input ng-model="serviceDog" required>
+
+                  </md-input-container>
+              </div>
+              <label>Date Needed:</label>
+              <div layout-gt-xs="row">
+                  <md-datepicker class="md-block" * ng-model="serviceDate" md-placeholder="Enter date">
+                  </md-datepicker>
+                </div>
+                </div>
+
+                <md-input-container class="md-block">
+                  <label>Special Request</label>
+                  <textarea ng-model="serviceNotes" md-maxlength="200" rows="5" md-select-on-focus></textarea>
+                </md-input-container>
+
+              </form>
+
+
+            </div>
+          </md-content>
+        </div>
+        <button ng-click="submitServiceReq()" class="btn btn-primary center"> Submit Appointment Request </button>
+
+    </div>
+</div>
